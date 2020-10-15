@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="iTimMobile.Modules.LoginModule.Login.LoginView"
+             Shell.FlyoutBehavior="Disabled"
+             Shell.NavBarIsVisible="False">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="Center">
+            <Entry Placeholder="Username" Margin="24,0,24,0"/>
+            <Entry Placeholder="Password" Margin="24,0,24,0"/>
+            <Button Text="Login" Margin="24,0,24,0" Command="{Binding LoginCommand}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

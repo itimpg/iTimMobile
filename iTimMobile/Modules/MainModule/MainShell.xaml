@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:main="clr-namespace:iTimMobile.Modules.MainModule.Main"
+       x:Class="iTimMobile.Modules.MainModule.MainShell">
+
+    <FlyoutItem FlyoutDisplayOptions="AsMultipleItems">
+        <ShellContent Title="Main"
+                      Route="MainViewModel"
+                      ContentTemplate="{DataTemplate main:MainView }"/>
+    </FlyoutItem>
+
+    <MenuItem Text="Logout" Command="{Binding SignOutCommand}"/>
+</Shell>
