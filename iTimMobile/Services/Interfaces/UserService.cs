@@ -9,11 +9,16 @@ namespace iTimMobile.Services.Interfaces
     {
         public void ClearUserInfo()
         {
-            Preferences.Clear(Constants.LOGGED_IN_USER);
+            Preferences.Remove(Constants.LOGGED_IN_USER);
         }
 
         public UserInfo GetUserInfo()
         {
+            if (!Preferences.ContainsKey(Constants.LOGGED_IN_USER))
+            {
+                return null;
+            }
+
             var userInfoJson = Preferences.Get(Constants.LOGGED_IN_USER, string.Empty);
             return JsonSerializer.Deserialize<UserInfo>(userInfoJson);
         }
