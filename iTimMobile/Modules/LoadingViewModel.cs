@@ -1,24 +1,24 @@
-﻿using System.Threading.Tasks;
-using iTimMobile.Modules.LoginModule.Login;
+﻿using iTimMobile.Modules.LoginModule.Login;
 using iTimMobile.Services.Interfaces;
-using iTimMobile.Shared;
 using iTimMobile.Shared.ViewModels;
-using Xamarin.Essentials;
+using System.Threading.Tasks;
 
 namespace iTimMobile.Modules
 {
     public class LoadingViewModel : BaseViewModel
     {
-        private INavigationService _navigationService;
+        private readonly INavigationService _navigationService;
+        private readonly IUserService _userService;
 
-        public LoadingViewModel(INavigationService navigationService)
+        public LoadingViewModel(INavigationService navigationService, IUserService userService)
         {
             _navigationService = navigationService;
+            _userService = userService;
         }
 
         public override Task InitializeAsync(object obj)
         {
-            if (Preferences.ContainsKey(Constants.IS_USER_LOGGED_IN) && Preferences.Get(Constants.IS_USER_LOGGED_IN, false) == true)
+            if(_userService.GetUserInfo() != null)
             {
                 _navigationService.GoToMainFlow();
                 return Task.CompletedTask;

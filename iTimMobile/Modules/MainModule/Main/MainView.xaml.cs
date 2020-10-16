@@ -10,5 +10,10 @@ namespace iTimMobile.Modules.MainModule.Main
             InitializeComponent();
             BindingContext = App.Container.Resolve<MainViewModel>();
         }
+
+        protected override async void OnAppearing()
+        {
+            await (BindingContext as MainViewModel).InitializeAsync(null);
+        }
     }
 }

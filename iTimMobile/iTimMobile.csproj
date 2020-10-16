@@ -17,8 +17,6 @@
     <Folder Include="Modules\" />
     <Folder Include="Modules\LoginModule\" />
     <Folder Include="Modules\MainModule\" />
-    <Folder Include="Services\" />
-    <Folder Include="Services\Interfaces\" />
     <Folder Include="Modules\LoginModule\Login\" />
     <Folder Include="Modules\MainModule\Main\" />
   </ItemGroup>

@@ -3,6 +3,6 @@ namespace iTimMobile.Shared
 {
     public class Constants
     {
-        public const string IS_USER_LOGGED_IN = "userLogged";
+        public const string LOGGED_IN_USER = "LoggedInUser";
     }
 }

@@ -1,10 +1,8 @@
 ﻿using iTimMobile.Modules.MainModule.Main;
 using iTimMobile.Services.Interfaces;
-using iTimMobile.Shared;
 using iTimMobile.Shared.ViewModels;
 using System.Threading.Tasks;
 using System.Windows.Input;
-using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace iTimMobile.Modules.LoginModule.Login
@@ -12,19 +10,19 @@ namespace iTimMobile.Modules.LoginModule.Login
     public class LoginViewModel : BaseViewModel
     {
         private readonly INavigationService _navigationService;
+        private readonly IUserService _userService;
 
         public ICommand LoginCommand { get => new Command(async () => await LoginAsync()); }
 
-        public LoginViewModel(INavigationService navigationService)
+        public LoginViewModel(INavigationService navigationService, IUserService userService)
         {
             _navigationService = navigationService;
+            _userService = userService;
         }
 
         private async Task LoginAsync()
         {
-            // TODO: do login
-
-            Preferences.Set(Constants.IS_USER_LOGGED_IN, true);
+            _userService.StoreUserInfo(new Models.UserInfo { Name = "iTim" });
             _navigationService.GoToMainFlow();
             await _navigationService.InsertAsRoot<MainViewModel>();
         }
