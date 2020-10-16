@@ -1,10 +1,9 @@
-﻿using System;
-using System.Threading.Tasks;
-using System.Windows.Input;
-using iTimMobile.Modules.MainModule.Main;
+﻿using iTimMobile.Modules.MainModule.Main;
 using iTimMobile.Services.Interfaces;
 using iTimMobile.Shared;
 using iTimMobile.Shared.ViewModels;
+using System.Threading.Tasks;
+using System.Windows.Input;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 

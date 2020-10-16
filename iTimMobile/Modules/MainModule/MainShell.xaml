@@ -2,7 +2,13 @@
 <Shell xmlns="http://xamarin.com/schemas/2014/forms"
        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
        xmlns:main="clr-namespace:iTimMobile.Modules.MainModule.Main"
-       x:Class="iTimMobile.Modules.MainModule.MainShell">
+       xmlns:controls="clr-namespace:iTimMobile.Common.Controls"
+       x:Class="iTimMobile.Modules.MainModule.MainShell"
+       FlyoutBackgroundColor="{StaticResource LightBlueBackground}">
+
+    <Shell.FlyoutHeader>
+        <controls:FlyoutHeader></controls:FlyoutHeader>
+    </Shell.FlyoutHeader>
 
     <FlyoutItem FlyoutDisplayOptions="AsMultipleItems">
         <ShellContent Title="Main"

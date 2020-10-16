@@ -12,6 +12,7 @@
     <PackageReference Include="Autofac" Version="6.0.0" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Common\Styles\" />
     <Folder Include="Shared\" />
     <Folder Include="Modules\" />
     <Folder Include="Modules\LoginModule\" />
@@ -20,5 +21,10 @@
     <Folder Include="Services\Interfaces\" />
     <Folder Include="Modules\LoginModule\Login\" />
     <Folder Include="Modules\MainModule\Main\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="Common\Controls\FlyoutHeader.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>
