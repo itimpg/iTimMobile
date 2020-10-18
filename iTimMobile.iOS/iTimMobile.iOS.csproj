@@ -142,4 +142,8 @@
       <Name>iTimMobile</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Assets.xcassets\LaunchScreenLogo.imageset\" />
+    <Folder Include="Assets.xcassets\Splash.imageset\" />
+  </ItemGroup>
 </Project>

@@ -6,9 +6,12 @@
              Shell.NavBarIsVisible="False">
     <ContentPage.Content>
         <StackLayout VerticalOptions="Center">
-            <Entry Placeholder="Username" Margin="24,0,24,0"/>
+            <Image Aspect="AspectFill"
+                   HeightRequest="240"
+                   Source="AppIcon" />
+            <Entry Placeholder="Username" Margin="24,30,24,0"/>
             <Entry Placeholder="Password" Margin="24,0,24,0"/>
-            <Button Text="Login" Style="{StaticResource BlueButton}" Command="{Binding LoginCommand}"/>
+            <Button Text="Login" Style="{StaticResource LoginButton}" Command="{Binding LoginCommand}"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

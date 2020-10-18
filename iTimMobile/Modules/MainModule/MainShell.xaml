@@ -4,7 +4,11 @@
        xmlns:main="clr-namespace:iTimMobile.Modules.MainModule.Main"
        xmlns:controls="clr-namespace:iTimMobile.Common.Controls"
        x:Class="iTimMobile.Modules.MainModule.MainShell"
-       FlyoutBackgroundColor="{StaticResource LightBlueBackground}">
+       Shell.ForegroundColor="{StaticResource TitleHamburgerColor}"
+       Shell.BackgroundColor="{StaticResource TitleBarBackgroundColor}"
+       FlyoutIcon="AppIcon"
+       FlyoutHeaderBehavior="CollapseOnScroll"
+       FlyoutBackgroundColor="{StaticResource FlyoutBackgroundColor}">
 
     <Shell.FlyoutHeader>
         <controls:FlyoutHeader></controls:FlyoutHeader>
@@ -12,9 +16,10 @@
 
     <FlyoutItem FlyoutDisplayOptions="AsMultipleItems">
         <ShellContent Title="Main"
+                      Icon="AppIcon"
                       Route="MainViewModel"
-                      ContentTemplate="{DataTemplate main:MainView }"/>
+                      ContentTemplate="{DataTemplate main:MainView}"/>
     </FlyoutItem>
 
-    <MenuItem Text="Logout" Command="{Binding SignOutCommand}"/>
+    <MenuItem Text="Logout" IconImageSource="tab_about.png" Command="{Binding SignOutCommand}"/>
 </Shell>
