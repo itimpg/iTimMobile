@@ -1,9 +1,10 @@
 ﻿using iTimMobile.Models;
+using iTimMobile.Services.Interfaces;
 using iTimMobile.Shared;
 using System.Text.Json;
 using Xamarin.Essentials;
 
-namespace iTimMobile.Services.Interfaces
+namespace iTimMobile.Services
 {
     public class UserService : IUserService
     {
